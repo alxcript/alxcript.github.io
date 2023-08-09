@@ -7,6 +7,7 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     PresentationComponent,
     ProjectsComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    PageNotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
