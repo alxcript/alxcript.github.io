@@ -1,0 +1,14 @@
+.wrapper {
+    padding: 0 5px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 5px;
+    justify-content: center;
+}
+
+.description {
+    margin: 20px 0px;
+}

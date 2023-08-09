@@ -1,0 +1,28 @@
+<div class="project-card" *ngIf="project">
+    <div class="image-project-wrapper">
+        <img class="project-image" [src]="project.image" alt="project 1" (click)="openModal()">
+    </div>
+    <div class="project-information">
+        <div class="title">
+            <a href="{{project.url}}" target="_blank">{{ project.name }}</a>
+            <span class="year">{{ project.year }}</span>
+        </div>
+        <div class="description">{{project.description}}</div>
+        <div class="tags">
+            <span *ngFor="let tech of project.tech">
+                {{ tech }}
+            </span>
+        </div>
+    </div>
+   
+</div>
+
+<!-- Modal -->
+<div *ngIf="isModalOpen()"  @opacityIn>
+    <div class="modal" >
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="project.image" alt="Imagen" class="modal-content" >
+        <p class="modal-title">{{project.name}}</p>
+    </div>
+    <div class="overlay" (click)="closeModal()"></div>
+</div>

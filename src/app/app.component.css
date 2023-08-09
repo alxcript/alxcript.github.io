@@ -1,0 +1,171 @@
+:host {
+    --text-slate: #8892b0;
+    --text-light-slate: #ccd6f6;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100svh;
+    background-color: var(--background-dark);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    padding: 0 50px;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.nav-bar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-bar .logo a {
+    color: var(--text-dark);
+
+}
+
+.logo .image {
+    width: 100%;
+    filter: drop-shadow(0px 0px 0.3px #34ff0b);
+}
+
+.logo .image:hover {
+    filter: drop-shadow(0px 0px 0.3px #f5f8f5);
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-left: 1.5em;
+    padding: 5px;
+    font-size: 13px;
+    color: var(--text-green);
+    counter-increment: item 1;
+}
+
+.menu li a {
+    color: var(--text-light-slate);
+    transition: color 0.2s ease;
+    font-family: 'Space Mono', monospace;
+}
+
+.menu li a:hover {
+    color: var(--text-green);
+}
+
+.menu li a::before {
+    content: '0' counter(item) '.';
+    color: var(--text-green);
+    margin-right: 5px;
+}
+
+.main {
+    padding: 0 150px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.column li a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.column::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--light-slate);
+}
+
+.left {
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+}
+
+.left a {
+    color: var(--light-slate);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.left a:hover {
+    transform: translateY(-3px);
+}
+
+.left a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.left li:last-child {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1080px) {
+    .main {
+        padding: 0px 100px;
+
+    }
+
+    .left {
+        position: fixed;
+        bottom: 0;
+        left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main {
+        padding: 0px;
+
+    }
+
+    .column::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 0px;
+        margin: 0px auto;
+        background-color: var(--light-slate);
+    }
+
+    .header {
+        padding: 0 10px;
+    }
+}
+
+.footer {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+}
+
+.subtitle img {
+    height: 0.75rem;
+}

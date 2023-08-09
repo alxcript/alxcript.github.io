@@ -1,0 +1,66 @@
+.wrapper {
+    --bg-image: url('/assets/background.jpg');
+    --bg-image-opacity: 0.25;
+    position: relative;
+    height: 600px;
+    width: 100%;
+    isolation: isolate;
+    box-shadow: rgba(223, 214, 214, 0.493) 0px 0px 20px;
+}
+
+.wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: var(--bg-image-opacity);
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+}
+
+.presentation {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    color: var(--text-dark);
+}
+
+.subtitle {
+    letter-spacing: 0.15rem;
+}
+
+.button {
+    border: 1px solid var(--text-green);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.presentation .button {
+    align-self: flex-start;
+    color: var(--text-dark);
+}
+
+.presentation .button:hover {
+    color: var(--text-green);
+}
+
+.description {
+    max-width: 60%;
+    color: var(--text-paragraph-dark);
+}
+
+.text-headline-dark {
+    letter-spacing: 0.15rem;
+    color: var(--text-headline-dark);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .description {
+        max-width: 100%;
+    }
+}

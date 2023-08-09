@@ -1,0 +1,7 @@
+<div class="wrapper">
+    <h2>Algunos proyectos realizados</h2>
+    <p class="description">Estos proyectos han sido desarrollados durante mis estudios en la universidad 👨‍🎓.</p>
+    <div class="projects" @fadeInOut >
+        <app-project-card [project]="project" *ngFor="let project of projects"></app-project-card>
+    </div>
+</div>
