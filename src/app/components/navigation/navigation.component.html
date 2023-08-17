@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <div class="logo">
+            <a routerLink="/">
+                <img class="image" src="/assets/logo.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <ol [@menuAnimation]="menu.length">
+                <li *ngFor="let option of menu">
+                    <a routerLink="{{option.url}}">{{option.name}}</a>
+                </li>
+            </ol>
+        </div>
+    </nav>
+</header>
