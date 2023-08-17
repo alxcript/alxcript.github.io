@@ -1,0 +1,13 @@
+<footer class="footer">
+    <div class="social">
+      <ul>
+        <li *ngFor="let social of socialMedia">
+          <a href="{{social.url}}" target="_blank" [attr.aria-label]="social.name">
+            <app-icon name="{{social.name}}"></app-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p class="subtitle">2023 · Homemade with <img loading="lazy"
+        src="https://img.shields.io/badge/angular-B52E31?logo=angular" alt="logo"></p>
+  </footer>

@@ -5,7 +5,7 @@
     <div class="project-information">
         <div class="title">
             <a href="{{project.url}}" target="_blank">{{ project.name }}</a>
-            <span class="year">{{ project.year }}</span>
+            <sup class="year">{{ project.year }}</sup>
         </div>
         <div class="description">{{project.description}}</div>
         <div class="tags">
@@ -14,14 +14,13 @@
             </span>
         </div>
     </div>
-   
 </div>
 
 <!-- Modal -->
-<div *ngIf="isModalOpen()"  @opacityIn>
-    <div class="modal" >
+<div *ngIf="isModalOpen()" @opacityIn>
+    <div class="modal">
         <span class="close" (click)="closeModal()">&times;</span>
-        <img [src]="project.image" alt="Imagen" class="modal-content" >
+        <img [src]="project.image" alt="Imagen" class="modal-content">
         <p class="modal-title">{{project.name}}</p>
     </div>
     <div class="overlay" (click)="closeModal()"></div>

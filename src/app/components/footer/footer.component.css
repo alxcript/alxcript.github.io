@@ -1,0 +1,40 @@
+.footer {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+}
+
+.subtitle img {
+    height: 0.75rem;
+}
+
+.social {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin: 0 auto 10px;
+    }
+
+    & ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        & a {
+            padding: 10px;
+
+            & svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

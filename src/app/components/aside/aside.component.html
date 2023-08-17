@@ -1,0 +1,9 @@
+<div [ngClass]="this.orientation == 'left' ? 'container side-left' : 'container side-right'" @opacityIn>
+  <ul>
+    <li *ngFor="let social of socialMedia">
+      <a href="{{social.url}}" target="_blank" [attr.aria-label]="social.name">
+        <app-icon name="{{social.name}}"></app-icon>
+      </a>
+    </li>
+  </ul>
+</div>
